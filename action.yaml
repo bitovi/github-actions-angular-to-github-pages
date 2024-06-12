@@ -1,5 +1,5 @@
-name: 'Deploy React to GitHub Pages'
-description: 'Build and deploy react code to GitHub pages'
+name: 'Deploy Angular to GitHub Pages'
+description: 'Build and deploy Angular code to GitHub pages'
 branding:
   icon: upload-cloud
   color: red
