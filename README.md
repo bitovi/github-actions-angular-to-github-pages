@@ -7,7 +7,7 @@ This action uses the [new GitHub Actions](https://www.bitovi.com/blog/deploy-you
 
 ## Action Summary
 
-This action deploys Angular sites to Github Pages.  The build process should create static files and put them into a build direcory that will be moved into your Pages hosting location.
+This action deploys an Angular site to Github Pages. The build process should create static files and put them into a build direcory that will be moved into your Pages hosting location.
 
 If you would like to deploy a backend app/service, check out our other actions:
 | Action | Purpose |
@@ -31,11 +31,11 @@ Or, you can hire us for training, consulting, or development. [Set up a free con
 
 # Basic Use
 
-> **Note: ** Be sure to [set up your project for actions deployed pages](#set-up-your-project-for-actions-deployed-pages).
+> **Note:** Be sure to [set up your project for actions deployed pages](#set-up-your-project-for-actions-deployed-pages).
 
 For basic usage, create `.github/workflows/deploy.yaml` with the following to build on push.
 
-```yaml {"id":"01J06VADPDFKDBQ0QDCWYBSV0C"}
+```yaml
 on:
   push:
     branches:
@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: build-publish
-      uses: bitovi/github-actions-angular-to-github-pages@v1.2.4
+      uses: bitovi/github-actions-angular-to-github-pages@v1.0.0
       with:
         path: build # change to your build folder
 ```
@@ -94,13 +94,11 @@ default: true
 | `build_command` | String | Specifies the command to run after `npm ci` for the build, Default is `npm run build` (Optional)|
 | `caching` | T/F | Set to `true` if you want to cache npm dependencies (Default is `false`) (Optional) |
 
-# Customizing
-
-## Repository Environments
+# Customizing Repository Environments
 
 To surface published url to the root of the repo via a GitHub Environment, add the following to your workflow:
 
-```yaml {"id":"01J06VADPDFKDBQ0QDCZETS4GH"}
+```yaml
 # ...etc
 jobs:
   deploy:
@@ -115,7 +113,7 @@ jobs:
 <details>
   <summary>Full example with environment</summary>
 
-```yaml {"id":"01J06VADPDFKDBQ0QDD1VCH2SP"}
+```yaml
 on:
   push:
     branches:
