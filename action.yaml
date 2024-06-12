@@ -25,7 +25,7 @@ inputs:
   path:
     description: 'Specifies the path of the static assets after building'
     required: false
-    default: 'dist'
+    default: dist/${{ github.event.repository.name }}/browser
   install_command:
     description: 'Specifies the command to run the installation.'
     required: false
@@ -33,7 +33,7 @@ inputs:
   build_command:
     description: 'Specifies the command to run after the install command for the build'
     required: false
-    default: 'npm run build'
+    default: npm run build -- --base-href=/${{ github.event.repository.name }}/
   caching:
     description: 'Specifies if the action should cache npm dependencies.'
     required: false
