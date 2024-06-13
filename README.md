@@ -52,8 +52,6 @@ jobs:
     steps:
     - id: build-publish
       uses: bitovi/github-actions-angular-to-github-pages@v1.0.0
-      with:
-        path: build # change to your build folder
 ```
 
 ## Set up your project for Actions deployed Pages
@@ -69,6 +67,16 @@ jobs:
 # Inputs
 
 The following inputs can be used as `step.with` keys. All inputs are optional and have sane defaults.
+
+Example:
+```yaml
+steps:
+    - id: build-publish
+      uses: bitovi/github-actions-angular-to-github-pages@v1.0.0
+      with:
+        path: dist/${{ github.event.repository.name }}/browser                            # default
+        build_command: npm run build -- --base-href=/${{ github.event.repository.name }}/ # default
+```
 
 | Name             | Type    | Description                        |  Default |
 |------------------|---------|------------------------------------|--|
