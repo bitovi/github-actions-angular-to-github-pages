@@ -3,7 +3,7 @@
 `bitovi/github-actions-angular-to-github-pages` builds and deploys an Angular application to GitHub Pages.
 
 This action uses the [new GitHub Actions](https://www.bitovi.com/blog/deploy-your-react-project-to-github-pages-with-github-actions#DeployyourReactprojecttoGitHubPageswithGitHubActions-What%E2%80%99sNewwithGitHubPages) publishing method which allows you to create an artifact that contains the result of the build and serves the files in the artifact on the Pages site. There’s no need to check files back into your repository, keeping it nice and clean.
-<!-- ![alt](https://bitovi-gha-pixel-tracker-deployment-main.bitovi-sandbox.com/pixel/P767_UznW_lSAbZZOhPj-) -->
+![alt](https://bitovi-gha-pixel-tracker-deployment-main.bitovi-sandbox.com/pixel/9ghbRIBjn2HRlHOgaDBX_)
 
 ## Action Summary
 
